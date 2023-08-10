@@ -14,6 +14,11 @@ def read_yaml(path_to_yaml:Path)->ConfigBox:
        ValueError: if yaml file is empty
        e:empty file
 
+        def read_yaml(self, path_to_yaml):
+        with open(path_to_yaml) as yaml_file:
+            content = yaml.safe_load(yaml_file)
+            return content
+
        Returns:
        ConfigBox:Configbox type
     """
